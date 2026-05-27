@@ -19,6 +19,19 @@ export default function NavBar() {
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-xl' : ''}`}>
+      {/* Ticker Banner */}
+      <div className="bg-magna-yellow overflow-hidden whitespace-nowrap py-1.5 relative border-b border-magna-yellow/80 z-[60]">
+        <motion.div 
+          animate={{ x: [0, -1035] }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 15 }}
+          className="inline-block text-magna-blue font-bold text-xs uppercase tracking-widest"
+        >
+          {Array(10).fill("🚀 GET LOANS AT ONLY 15% WITH MAGNA CREDIT — INSTANT APPROVAL — ").map((text, i) => (
+            <span key={i} className="mx-4">{text}</span>
+          ))}
+        </motion.div>
+      </div>
+
       {/* Secondary Nav */}
       <div className="bg-blue-950 border-b border-white/10 hidden lg:block">
         <div className="container mx-auto px-4 flex items-center justify-end gap-6 h-10 text-sm">

@@ -167,6 +167,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Portrait Ads Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            <div className="w-full rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/5] bg-gray-100 hover:scale-[1.02] transition-transform duration-300">
+              <Image src="/magna-ad1.png" alt="Magna Credit Promo 1" fill className="object-cover" />
+            </div>
+            <div className="w-full rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/5] bg-gray-100 hover:scale-[1.02] transition-transform duration-300">
+              <Image src="/magna-ad2.png" alt="Magna Credit Promo 2" fill className="object-cover" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Ad Banner 1 */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">

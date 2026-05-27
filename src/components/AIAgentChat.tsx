@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Message = {
@@ -12,7 +13,7 @@ type Message = {
 export default function AIAgentChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { id: 1, sender: "agent", text: "Hi there! I'm the Magna Credit AI Assistant. I can help you apply for a loan instantly. To get started, what is your full name?" }
+    { id: 1, sender: "agent", text: "Hi! Welcome to Magna Credit. Need quick cash? I can help you get a loan in under 1 hour. What is your full name?" }
   ]);
   const [inputValue, setInputValue] = useState("");
   const [step, setStep] = useState(0); 
@@ -31,6 +32,13 @@ export default function AIAgentChat() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,8 +106,8 @@ export default function AIAgentChat() {
           >
           {/* Header */}
           <div className="bg-magna-blue p-4 flex items-center gap-3">
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-inner overflow-hidden border-2 border-white/20">
+              <Image src="/logo.jpeg" alt="Agent" width={40} height={40} className="object-cover" />
             </div>
             <div>
               <h3 className="font-bold text-white leading-tight">Magna AI Assistant</h3>
