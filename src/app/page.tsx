@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -166,6 +167,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ad Banner 1 */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="w-full rounded-3xl overflow-hidden shadow-2xl relative aspect-[21/9] bg-gray-100"
+          >
+            <Image src="/1.png" alt="Magna Credit Promotion" fill className="object-cover" />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Requirements Section */}
       <section className="py-24 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col md:flex-row gap-16 items-center max-w-6xl">
@@ -235,6 +250,20 @@ export default function Home() {
                 <h3 className="font-bold text-gray-900 text-lg leading-tight relative z-10">{step.title}</h3>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Ad Banner 2 */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="w-full rounded-3xl overflow-hidden shadow-2xl relative aspect-[21/9] bg-gray-100"
+          >
+            <Image src="/2.png" alt="Magna Credit Special Offer" fill className="object-cover" />
           </motion.div>
         </div>
       </section>

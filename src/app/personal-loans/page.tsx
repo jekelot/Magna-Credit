@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function PersonalLoans() {
@@ -121,6 +122,20 @@ export default function PersonalLoans() {
                 </button>
               </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Ad Banner 3 */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="w-full rounded-3xl overflow-hidden shadow-2xl relative aspect-[21/9] bg-gray-100"
+          >
+            <Image src="/3.png" alt="Magna Credit Promotion" fill className="object-cover" />
           </motion.div>
         </div>
       </section>

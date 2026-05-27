@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -99,6 +100,15 @@ export default function AboutUs() {
             <p>
               Our process is designed to be as simple as possible. We only require three things: your Name, the Amount you need, and your Security details. With these, our dedicated team works swiftly to ensure you get funded in less than an hour.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ad Banner 5 */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="w-full rounded-3xl overflow-hidden shadow-2xl relative aspect-[21/9] bg-gray-100">
+            <Image src="/5.png" alt="Magna Credit Promotion" fill className="object-cover" />
           </div>
         </div>
       </section>
