@@ -168,7 +168,7 @@ export default function AIAgentChat() {
                 onChange={(e) => setInputValue(e.target.value)}
                 disabled={step >= 3}
                 placeholder={step >= 3 ? "Application ready" : "Type your message..."}
-                className="flex-1 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-magna-blue disabled:bg-gray-50 disabled:text-gray-400"
+                className="flex-1 px-4 py-2 border border-gray-200 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-magna-blue disabled:bg-gray-50 disabled:text-gray-400"
               />
               <button 
                 type="submit"
